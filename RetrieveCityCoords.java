@@ -82,4 +82,17 @@ public class RetrieveCityCoords {
         }
         return coords;
     }
+
+
+    public static void main(String[] args) throws IOException{
+        String userCity;
+        Scanner keyboard = new Scanner(System.in);
+
+        System.out.print("Enter a city name: " );
+        userCity = keyboard.nextLine();
+
+        RetrieveCityCoords city = new RetrieveCityCoords(userCity);
+
+        System.out.println("Coordinates for " + userCity + ": " + city.getCoordString());
+    }
 }
